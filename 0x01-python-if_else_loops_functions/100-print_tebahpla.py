@@ -1,9 +1,5 @@
 #!/usr/bin/python3
 
-for var in range(ord('z'), ord('a') - 1, -1):
-    
-    if var % 2 == 1:
-        
-        var -= (ord('a') - ord('A'))
-        
-    print("{:c}".format(var), end='')
+print("".join(["{:c}".format(c-32 if c % 2 else c)
+
+               for c in range(122, 96, -1)]), end="")
