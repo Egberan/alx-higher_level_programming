@@ -1,13 +1,9 @@
 #!/usr/bin/python3
 
-
-
-for i in range(0, 26):
+for var in range(ord('z'), ord('a') - 1, -1):
     
-    if i % 2 == 0:
+    if var % 2 == 1:
         
-        print("{:c}".format(122 - i), end="")
+        var -= (ord('a') - ord('A'))
         
-    else:
-        
-        print("{:c}".format(90 - i), end="")
+    print("{:c}".format(var), end='')
