@@ -2,12 +2,8 @@
 
 
 def safe_print_integer(value):
-    """
-    prints a list of anything, but only prints the integers
-    Returns the amount of integers printed
-    """
     try:
         print("{:d}".format(value))
-        return True
-    except:
-        return False
+        return (True)
+    except (TypeError, ValueError):
+        return (False)
